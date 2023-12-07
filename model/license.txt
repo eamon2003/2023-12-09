@@ -1,0 +1,11 @@
+Model Information:
+* title:	Instax Mini 8 Instant Camera
+* source:	https://sketchfab.com/3d-models/instax-mini-8-instant-camera-606912cf09074dcbb35f6c4a3842d528
+* author:	mariainggrid (https://sketchfab.com/mariainggrid)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Instax Mini 8 Instant Camera" (https://sketchfab.com/3d-models/instax-mini-8-instant-camera-606912cf09074dcbb35f6c4a3842d528) by mariainggrid (https://sketchfab.com/mariainggrid) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

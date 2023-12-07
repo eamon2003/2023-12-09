@@ -1,0 +1,37 @@
+<html lang="zh-CN">
+
+<head>
+    <title>1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div>
+        <div class="title"><img src="./static/title.png" /></div>
+        <div id="scroll"></div>
+        <canvas id="model"></canvas>
+        <canvas id="line"></canvas>
+        <div id="cards"></div>
+        <div id="copy"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tween.js/20.0.0/tween.umd.js'></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/GLTFLoader.js"></script>
+    <script src="js/WebGL.js"></script>
+    <script src="js/stats.min.js"></script>
+
+    <script type="application/javascript">
+        var modelUrl = './model/scene.gltf'
+    </script>
+    <script type="module" src="js/app.js"></script>
+    <script src="js/3dmodel.js"></script>
+    <script src="js/2dmodel.js"></script>
+    <script src="js/scroll.js"></script>
+</body>
+
+</html>
