@@ -7,10 +7,14 @@ const app = createApp({
     </div>
     `,
     setup() {
-        const message = ref('Hello, Composition API!');
+        const cardImgsList = [];
+        for (let i = 1; i <= 32; i++) {
+            cardImgsList[i] = new Image();
+            cardImgsList[i].src = './static/' + i + '.jpg'
+        }
         const cardImgs = [];
         for (let i = 1; i <= 32; i++) {
-            cardImgs.push('./static/' + i + '.jpg');
+            cardImgs.push(cardImgsList[i].src)
         };
         const discribes = [
             '2023.05.21\n\n去格子汉堡吃了汉堡，还有自助饮料和配料，背后一直在放海绵宝宝，我们穿的情侣服呢',
@@ -46,10 +50,11 @@ const app = createApp({
             '2023.08.16\n\n你好前夫哥',
             '2023.02.06\n\n我旁边开花了嘿嘿，就是我这发型是什么玩意',
         ]
+
         // 计算中心点的坐标
         const centerX = window.innerWidth / 2;
         const centerY = window.innerHeight / 2;
-        console.log(centerX, centerY);
+        // console.log(centerX, centerY);
         let mouseX, mouseY;
         let cards = document.getElementById('cards');
         document.addEventListener('scroll', () => mouseMove())
@@ -90,7 +95,7 @@ const app = createApp({
             cover.classList.add('cover');
             disc.classList.add('disc');
             disc.innerText = discribes[index - 1];
-            
+
             setCopyCard(copyCard);
             setDisc(disc);
             cover.addEventListener('click', function () {
@@ -101,7 +106,6 @@ const app = createApp({
             document.getElementById('cards').appendChild(cover);
         }
         return {
-            message,
             cardImgs,
             mouseX,
             mouseY,
@@ -114,6 +118,7 @@ const app = createApp({
             cards,
         };
     },
+
 
 });
 app.mount('#cards');

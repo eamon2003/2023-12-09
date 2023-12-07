@@ -1,8 +1,8 @@
 let scl = document.getElementById('scroll')
 window.onbeforeunload = function () {
     //刷新后页面自动回到顶部
-    document.documentElement.scrollTop = 0; 
-    document.body.scrollTop = 0;  
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
 }
 let isScrolling = false;
 let scrollEndTimer;
@@ -41,6 +41,7 @@ function smoothScroll(targetDistance) {
     let absDistance = Math.abs(scrollDistance - targetDistance);
     let smoothTime = absDistance;
     smoothTime *= 2
+    if (targetDistance > 6500) smoothTime *= 3
     if (smoothTime < 300) smoothTime = 300 // 最小缓动时间为500m
     const animeInstance = anime({
         targets: document.scrollingElement, // 或者可以使用 document.documentElement
@@ -48,7 +49,7 @@ function smoothScroll(targetDistance) {
         duration: smoothTime, // 持续时间，单位是毫秒
         easing: 'easeOutQuart' // 缓动函数，可以根据需要选择不同的缓动效果
     });
-    window.addEventListener('wheel',()=>{
+    window.addEventListener('wheel', () => {
         animeInstance.pause();
     })
 }
